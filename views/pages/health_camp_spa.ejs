@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health Camp SPA</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/js/health_camp_spa.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/health_camp_spa.css" />
+</head>
+<body>
+
+<ul>
+  <li id="title" class="hz">Health Camp SPA</li>
+  <li class="menu"><a id="rpTab" onclick="showDiv('Reports');">Reports</a></li>
+  <li class="menu"><a id="hvTab" onclick="showDiv('Health Vitals');">Health Vitals</a></li>
+  <li class="menu"><a id="dmTab" class="currentTab" onclick="showDiv('Demographics');">Demographics</a></li>
+</ul>
+
+<div id="mainDiv">
+  <div id="dmDiv" class="contentDiv">
+    <div class="hz" style="width:50%;">
+      <form id="dmForm">
+        <p><label>First Name:</label>
+        <input id="fnm" type="text"></input></p>
+        <p><label>Last Name:</label>
+        <input id="lnm" type="text"></input></p>
+        <p><label>Gender:</label>
+          <select id="gnd">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select></p>
+        <p><label>Age:</label>
+        <input id="age" type="text"></input></p>
+        <p><label style="vertical-align:middle;">Notes or Other Details:</label>
+        <textarea id="det" rows="5" cols="25"></textarea></p>
+      </form>
+      <br/>
+      <button type="button" onclick="saveDm();">Save</button>
+    </div>
+    <div class="hz" style="width:50%;">
+      <video id="player" width="400" height="240" controls autoplay></video>
+      <br/><button id="capture" type="button">Capture</button>
+      <br/><br/><canvas id="canvas" width=120 height=90></canvas>
+    </div>
+  </div>
+  <div id="hvDiv" class="contentDiv" style="display:none;">
+    <div class="hz" style="width:60%;">
+      <form id="hvForm">
+        <p><label>Height (in.):</label>
+        <input id="hgt" class="hvInput" type="text"></input></p>
+        <p><label>Weight (lbs):</label>
+        <input id="wgt" class="hvInput" type="text"></input></p>
+        <p><label>Body Temperature (&deg;F):</label>
+        <input id="bdt" class="hvInput" type="text"></input></p>
+        <p><label>Pulse Rate:</label>
+        <input id="pls" class="hvInput" type="text"></input></p>
+        <p><label>Blood Pressure:</label>
+        <input id="bps" class="hvInput" type="text"></input></p>
+      </form>
+      <br/>
+      <button type="button" onclick="saveHv();">Save</button>
+    </div>
+    <div class="hz" style="width:40%;">
+      <label>Medications:</label><br/>
+      <textarea id="med" rows="4" cols="40"></textarea><br/>
+      <label>Notes:</label><br/>
+      <textarea id="nts" rows="4" cols="40"></textarea><br/>
+    </div>
+  </div>
+  <div id="rpDiv" class="contentDiv" style="display:none;padding:50px 100px;">
+    <table>
+      <thead>
+        <tr><td colspan="6">Patient Health Records</td></tr>
+        <tr>
+          <td>Name</td>
+          <td>Age</td>
+          <td>Gender</td>
+          <td>Photo</td>
+          <td>Medications</td>
+          <td>Notes</td>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
