@@ -16,7 +16,7 @@ var server = app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 const { Client } = require('pg');
 const dbClient = new Client({
-  connectionString: 'postgres://pjixiwwwdzjkng:b2e9b8d0e4189c607b9a9c59c7db262974db983616d75f8f99766d595b887ab6@ec2-107-20-211-10.compute-1.amazonaws.com:5432/d1h0gtcm5k3464',
+  connectionString: 'postgres://gbvljvprlsbmid:d4b06e74534577714c8f5538c682f47ff2385e28e776c93cda0a184c95fb22ce@ec2-54-156-0-178.compute-1.amazonaws.com:5432/d4bfa1c80lme34',
   ssl: true,
 });
 
